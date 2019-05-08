@@ -18,6 +18,8 @@ public class Encode {
   private String url;
 
   public String post(String message) {
+
+
     return Stream.of(message.split(""))
                  .filter(e -> !e.equals(" "))
                  .map(e -> getString(e))
@@ -25,6 +27,7 @@ public class Encode {
   }
 
   private String getString(String e) {
+    
     return restTemplate.postForObject(url, e, String.class);
   }
 }
