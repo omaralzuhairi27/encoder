@@ -1,6 +1,6 @@
 package at.nacs.encoder.communication;
 
-import at.nacs.encoder.logic.Encode;
+import at.nacs.encoder.logic.Encoder;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -12,11 +12,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class EncodeEndpoint {
 
-  private final Encode encode;
+  private final Encoder encoder;
 
   @PostMapping
   String get(@RequestBody String message) {
-    return encode.post(message);
+    return encoder.post(message);
 
   }
 }
