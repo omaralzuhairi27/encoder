@@ -1,5 +1,6 @@
 package at.nacs.encoder.communication;
 
+import at.nacs.encoder.Message;
 import at.nacs.encoder.logic.Encoder;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;

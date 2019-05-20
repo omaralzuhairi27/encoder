@@ -14,10 +14,10 @@ public class Encoder {
 
 
   public String post(String message) {
-    return Stream.of(message.split(""))
-                 .filter(e -> !e.equals(" "))
-                 .map(e -> getString(e))
-                 .collect(Collectors.joining(""));
+   return Stream.of(message.split(""))
+                           .filter(e -> !e.equals(" "))
+                           .map(e -> getString(e))
+                           .collect(Collectors.joining(""));
   }
 
   private String getString(String e) {
